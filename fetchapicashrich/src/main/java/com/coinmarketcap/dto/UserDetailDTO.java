@@ -27,8 +27,8 @@ public class UserDetailDTO {
 	private String userName;
 	
 	@NotEmpty
-	@Pattern(regexp="^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*?&])[A-Za-z\\d@$!%*?&]{8,}$")
-	@Size(min =8,max=15,message = "Password should be in range 4 to 15")
+	@Pattern(regexp="^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*?&])[A-Za-z\\d@$!%*?&]{8,}$",message = "Password should have least 1 upper, 1 lower, 1 digit and 1 special character")
+	@Size(min =8,max=15,message = "Password should be in range 8 to 15")
 	private String password;
 
 	public UserDetailDTO() {
